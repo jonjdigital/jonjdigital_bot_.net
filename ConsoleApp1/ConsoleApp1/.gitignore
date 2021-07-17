@@ -1,2 +1,6 @@
 #ignore the .env file
 /.env
+
+# unneeded directories
+/bin
+/obj

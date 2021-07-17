@@ -49,7 +49,7 @@ namespace ConsoleApp1
                 string response;
                 switch (msg.Content.ToLower())
                 {
-                    case "commands":
+                    case "!commands":
                         caller = new CallCommands();
                         response = caller.Response;
                         break;

@@ -19,3 +19,13 @@ D:\DiscordBot\jonjdigital_bot\ConsoleApp1\ConsoleApp1\obj\Debug\net5.0\ConsoleAp
 D:\DiscordBot\jonjdigital_bot\ConsoleApp1\ConsoleApp1\obj\Debug\net5.0\ref\ConsoleApp1.dll
 D:\DiscordBot\jonjdigital_bot\ConsoleApp1\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.pdb
 D:\DiscordBot\jonjdigital_bot\ConsoleApp1\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.genruntimeconfig.cache
+D:\DiscordBot\jonjdigital_bot\ConsoleApp1\ConsoleApp1\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+D:\DiscordBot\jonjdigital_bot\ConsoleApp1\ConsoleApp1\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\DiscordBot\jonjdigital_bot\ConsoleApp1\ConsoleApp1\bin\Debug\net5.0\Microsoft.Extensions.Caching.Abstractions.dll
+D:\DiscordBot\jonjdigital_bot\ConsoleApp1\ConsoleApp1\bin\Debug\net5.0\Microsoft.Extensions.Caching.Memory.dll
+D:\DiscordBot\jonjdigital_bot\ConsoleApp1\ConsoleApp1\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+D:\DiscordBot\jonjdigital_bot\ConsoleApp1\ConsoleApp1\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\DiscordBot\jonjdigital_bot\ConsoleApp1\ConsoleApp1\bin\Debug\net5.0\Microsoft.Extensions.Logging.dll
+D:\DiscordBot\jonjdigital_bot\ConsoleApp1\ConsoleApp1\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+D:\DiscordBot\jonjdigital_bot\ConsoleApp1\ConsoleApp1\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+D:\DiscordBot\jonjdigital_bot\ConsoleApp1\ConsoleApp1\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll

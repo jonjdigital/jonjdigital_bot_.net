@@ -5,6 +5,6 @@ namespace ConsoleApp1
     public abstract class CallBase
     {
         public string Response = "";
-        protected abstract string GetDescription(MessageCreateEventArgs e);
+        protected abstract string GetDescription();
     }
 }
