@@ -1,7 +1,10 @@
+using DSharpPlus.EventArgs;
+
 namespace ConsoleApp1
 {
     public abstract class CallBase
     {
-        protected abstract string GetDescription();
+        public string Response = "";
+        protected abstract string GetDescription(MessageCreateEventArgs e);
     }
 }

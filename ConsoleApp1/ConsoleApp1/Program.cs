@@ -6,6 +6,7 @@ using DSharpPlus;
 using DSharpPlus.Entities;
 using DSharpPlus.EventArgs;
 using ConsoleApp1;
+using ConsoleApp1.Commands;
 
 namespace ConsoleApp1
 {
@@ -44,12 +45,23 @@ namespace ConsoleApp1
                 if (author.IsBot) return;
 
                 //if the user just types hi, the bot will reply to the user!
-                if (msg.Content.ToLower() == "hi")
+                CallBase caller;
+                string response;
+                switch (msg.Content.ToLower())
                 {
-                    await msg.RespondAsync($"<@{author.Id}> Hi!");
+                    case "commands":
+                        caller = new CallCommands();
+                        response = caller.Response;
+                        break;
+                    default:
+                        throw new Exception("Command not recognised.");
                 }
-                
-                
+
+                await msg.RespondAsync(response);
+                // if (msg.Content.ToLower() == "hi")
+                // {
+                //     await msg.RespondAsync($"<@{author.Id}> Hi!");
+                // }
             };
             
             await discord.ConnectAsync();
