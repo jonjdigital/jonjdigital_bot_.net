@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\jonda\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\jonda\\.nuget\\packages"
+    ]
+  }
+}
