@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-namespace RaBase_API_V1
+namespace ConsoleApp1
 {
     public class DotEnv
     {

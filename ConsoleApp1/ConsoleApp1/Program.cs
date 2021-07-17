@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using DSharpPlus;
 using DSharpPlus.Entities;
 using DSharpPlus.EventArgs;
+using ConsoleApp1;
 
 namespace ConsoleApp1
 {
@@ -12,14 +13,15 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            // Console.WriteLine("Hello World!");
+            DotEnv.Load(".env");
             MainAsync().GetAwaiter().GetResult();
         }
 
         static async Task MainAsync()
         {
-            string token = "NzI5MDY2NDE2ODc0OTc5NDA5.XwDiAw.ktVq4pO_76JIL1no9E8IqUCJ82A";
+            string token = Environment.GetEnvironmentVariable("token");
             string prefix = "!";
+            string botVersion = "1.0.0"; // x.y.z - x = Major Feature Update, y = Minor Feature Update, 
 
             var discord = new DiscordClient(new DiscordConfiguration()
             {
@@ -40,6 +42,8 @@ namespace ConsoleApp1
                 {
                     await msg.RespondAsync($"<@{author.Id}> Hi!");
                 }
+                
+                
             };
             
             await discord.ConnectAsync();
