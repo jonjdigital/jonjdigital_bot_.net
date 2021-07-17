@@ -41,6 +41,10 @@
             "DSharpPlus": {
               "target": "Package",
               "version": "[4.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.8, )"
             }
           },
           "imports": [
