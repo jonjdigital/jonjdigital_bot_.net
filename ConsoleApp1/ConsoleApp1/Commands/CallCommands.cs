@@ -25,6 +25,7 @@ namespace ConsoleApp1.Commands
             string[] commandDetails = new string[commandsRaw.Length];
             for (int i = 0; i < commands.Length; i++)
             {
+                // Console.WriteLine(commandsRaw[i]);
                 commands[i] = Regex.Split(commandsRaw[i].Split("\\").Last().Split(".").First(), @"(?<!^)(?=[A-Z])")[1];
                 
                 // What was I thinking?
@@ -34,9 +35,9 @@ namespace ConsoleApp1.Commands
                 // MethodInfo method = t.GetMethod("GetDescription",
                 //     BindingFlags.Static | BindingFlags.Public);
                 // commandDetails[i] = (string) method.Invoke(null, null);
-
+                
                 commandDetails[i] = GetDescription();
-                Response += $"{commands[i]} - {commandDetails[i]}\n\n";
+                Response += $"{commands[i]} - {commandDetails[i]}\n";
             }
         }
     }

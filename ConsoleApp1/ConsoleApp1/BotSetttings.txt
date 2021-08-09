@@ -1,0 +1,11 @@
+namespace ConsoleApp1
+{
+    public class BotSetttings
+    {
+        //Please edit the placeholder variables below with the correct ones for your configuration
+        //Also please rename this file to BotSettings.cs
+        
+        public static string token = "BOT TOKEN FROM DISCORD DEV PORTAL";
+        public static string con_string = "server=DB_HOST;userid=DB_USER;port=3306;password=DB_PASSWORD;database=DB_NAME";
+    }
+}

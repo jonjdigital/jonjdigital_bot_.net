@@ -1,25 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "D:\\DiscordBot\\jonjdigital_bot\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj": {}
+    "F:\\DiscordBot\\jonjdigital_bot\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj": {}
   },
   "projects": {
-    "D:\\DiscordBot\\jonjdigital_bot\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj": {
+    "F:\\DiscordBot\\jonjdigital_bot\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DiscordBot\\jonjdigital_bot\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectUniqueName": "F:\\DiscordBot\\jonjdigital_bot\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
         "projectName": "ConsoleApp1",
-        "projectPath": "D:\\DiscordBot\\jonjdigital_bot\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectPath": "F:\\DiscordBot\\jonjdigital_bot\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
         "packagesPath": "C:\\Users\\jonda\\.nuget\\packages\\",
-        "outputPath": "D:\\DiscordBot\\jonjdigital_bot\\ConsoleApp1\\ConsoleApp1\\obj\\",
+        "outputPath": "F:\\DiscordBot\\jonjdigital_bot\\ConsoleApp1\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\jonda\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\jonda\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,6 +50,10 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.8, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.26, )"
             }
           },
           "imports": [
@@ -62,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\jonda\\.dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

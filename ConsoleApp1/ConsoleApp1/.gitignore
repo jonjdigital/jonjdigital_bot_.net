@@ -4,3 +4,6 @@
 # unneeded directories
 /bin
 /obj
+
+#live settnigs file. ONLY UPLOAD DUMMY
+BotSetttings.cs

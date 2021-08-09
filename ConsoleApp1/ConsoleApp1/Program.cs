@@ -19,11 +19,11 @@ namespace ConsoleApp1
 
         static async Task MainAsync()
         {
-            DotEnv.Load("../../../.env");
-            string token = Environment.GetEnvironmentVariable("token");
+            // string token = Environment.GetEnvironmentVariable("token");
+            string token = BotSetttings.token;
             string prefix = "!";
             string adminPrefix = "?";
-            string botVersion = "1.0.0"; // x.y.z
+            string sourceVersion = "1.0.0"; // x.y.z
                                          // x = Major Feature Update
                                          // y = Minor Feature Update & Major Bug Update
                                          // z = Minor Updates
@@ -34,35 +34,59 @@ namespace ConsoleApp1
                 TokenType = TokenType.Bot
             });
 
+            discord.GuildMemberAdded += (s, e) =>
+            {
+                Functions func = new Functions();
+                func.initateLevels(e.Guild, e.Member);
+                Console.WriteLine(e.Guild.Name);
+                return null;
+            };
+
             discord.MessageCreated += async (s, e) =>
             {
-                
+                Functions functions = new Functions();
                 DiscordMessage msg = e.Message;
                 DiscordUser author = e.Message.Author;
+                DiscordGuild guild = msg.Channel.Guild;
                 DiscordMember authorMember = e.Message.Channel.Guild.GetMemberAsync(author.Id).Result;
 
                 //if message is from the bot, we will ignore it
                 if (author.IsBot) return;
+                
+                //run the levelling command
+                Functions funct = new Functions();
+                funct.leveling(msg);
 
-                //if the user just types hi, the bot will reply to the user!
                 CallBase caller;
                 string response;
-                switch (msg.Content.ToLower())
+
+                
+                //admin based commands
+                if (msg.Content.ToLower() == adminPrefix + "ping")
                 {
-                    case "!commands":
-                        caller = new CallCommands();
-                        response = caller.Response;
-                        break;
-                    default:
-                        throw new Exception("Command not recognised.");
+                    caller = new CallPing(discord);
+                    response = caller.Response;
+                    await msg.RespondAsync(response);
+                }
+                
+                //public available commands
+                if (msg.Content.ToLower() == prefix + "commands")
+                {
+                    caller = new CallCommands();
+                    response = caller.Response;
+                    await msg.RespondAsync(response);
                 }
 
-                await msg.RespondAsync(response);
-                // if (msg.Content.ToLower() == "hi")
-                // {
-                //     await msg.RespondAsync($"<@{author.Id}> Hi!");
-                // }
+                if (msg.Content.ToLower() == prefix + "stats")
+                {
+                    caller = new CallStats(guild, author);
+                    DiscordEmbed embed = caller.Emb.Build();
+                    await msg.RespondAsync(embed);
+                }
+
             };
+
+            
             
             await discord.ConnectAsync();
             await Task.Delay(-1);

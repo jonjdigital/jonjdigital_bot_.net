@@ -2,7 +2,8 @@
   "runtimeOptions": {
     "additionalProbingPaths": [
       "C:\\Users\\jonda\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\jonda\\.nuget\\packages"
+      "C:\\Users\\jonda\\.nuget\\packages",
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ]
   }
 }
